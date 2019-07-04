@@ -9,13 +9,16 @@ In npm, it seems it can be from processing sub-dependencies at the same time as 
 This library intercepts the rename() call, informs the user of what it thinks is going on, and tries again.
 It works to fix the issue for me.
 
-### Required dependencies
-
-https://github.com/pmem/syscall_intercept
-
-### Building
-    make
+### Quick Installation
+    ln -s $(pwd)/*.so* /usr/lib
 
 ### Usage
     LD_PRELOAD=interceptrename.so npm install
 
+### Required dependencies (to build)
+
+https://github.com/pmem/syscall_intercept
+
+### Building
+    touch interceptrename.c
+    make

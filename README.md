@@ -10,12 +10,16 @@ This library intercepts the rename() call, informs the user of what it thinks is
 It works to fix the issue for me.
 
 ### Quick Installation
-    ln -s $(pwd)/*.so* /usr/lib
+    sudo ln -s $(pwd)/*.so* /usr/lib
 
 ### Usage
-    LD_PRELOAD=interceptrename.so npm install
+    LD_PRELOAD=/usr/lib/interceptrename.so npm install
 
-### Required dependencies (to build)
+### Required dependencies 
+
+- libcapstone (on Debian/Ubuntu this is `sudo apt-get install libcapstone3`)
+
+### Required build dependencies
 
 https://github.com/pmem/syscall_intercept
 

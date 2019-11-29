@@ -10,14 +10,11 @@ This library intercepts the rename() call, informs the user of what it thinks is
 It works to fix the issue for me.
 
 ### Quick Installation
+    sudo apt-get install libcapstone3
     sudo ln -s $(pwd)/*.so* /usr/lib
 
 ### Usage
     LD_PRELOAD=/usr/lib/interceptrename.so npm install
-
-### Required dependencies 
-
-- libcapstone (on Debian/Ubuntu this is `sudo apt-get install libcapstone3`)
 
 ### Required build dependencies
 
